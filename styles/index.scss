@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+.people{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,200px);
+    column-gap: 30px;
+    row-gap: 40px;
+    padding: 30px;
+
+    @media (max-width: 750px) {
+        grid-template-columns: repeat(2,200px);
+
+    }
+}
+
+.person{
+    width: 200px;
+}
+
+.photo{
+    position: relative;
+}
+
+.person__img{
+    display: inline-block;
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+    transition: height 1s, width 1s, border-radius 1s;
+}
+
+.rank{
+    margin-right: 10px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1;
+    background-color: #fff;
+    width: 32px;
+    text-align: center;
+    border-radius: 200px;
+    line-height: 32px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8B0000;
+}
+
+.details{
+    text-align: center;
+}
+
+.name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.extra{
+    font-size: 20px;
+    line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+.person:hover .extra{
+    display: block;
+}
+
+
+.person:hover{
+    background-color: #EEE;
+    border-radius: 12px;
+    transform: scale(1.32);
+}
+
+
+.person:hover .person__img{
+    transform: scale(0.7576);
+   
+    border-radius: 60px;
+}
+
+.person:hover .name{
+    font-size: 24px;
+}
